@@ -53,7 +53,6 @@ const SettingsView = () => {
         setLast(e);
     }
 
-
     return (
         <div>
             <Header />

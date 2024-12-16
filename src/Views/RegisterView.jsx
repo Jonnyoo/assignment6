@@ -66,7 +66,6 @@ function RegisterView() {
     setLast(lastName.current.value);
     setEmail(email.current.value);
     setPassword(password.current.value);
-
     setSelected(selectedGenres);
     setCurrentGenre(selectedGenresIds[0].genre);
 

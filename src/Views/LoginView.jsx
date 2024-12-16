@@ -8,12 +8,13 @@ import Header from "../Components/Header";
 
 function LoginView() {
   const { loggedIn, setLoggedIn } = useStoreContext();
-  const [password, setPassword] = useState('');
+  const { email, password } = useStoreContext();
+  const [userPassword, setPassword] = useState('');
   const navigate = useNavigate();
 
   function login(event) {
     event.preventDefault();
-    if (password === "mango") {
+    if (userPassword === password) {
       setLoggedIn(true);
       navigate('/movies');
     } else {
@@ -31,7 +32,7 @@ function LoginView() {
           <input type="email" id="email" name="email" required />
 
           <label htmlFor="password">Password</label>
-          <input type="password" id="password" name="password" value={password} onChange={(event) => { setPassword(event.target.value) }} required />
+          <input type="password" id="password" name="password" value={userPassword} onChange={(event) => { setPassword(event.target.value) }} required />
 
           <button type="submit" className="login-button">Login</button>
         </form>

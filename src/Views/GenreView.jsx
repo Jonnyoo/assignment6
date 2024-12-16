@@ -13,7 +13,12 @@ const genres = [
   { genre: "History", id: 36 },
   { genre: "Fantasy", id: 14 },
   { genre: "Horror", id: 27 },
-  { genre: "Comedy", id: 35 }
+  { genre: "Comedy", id: 35 },
+  { genre: "Crime", id: 80 },
+  { genre: "Music", id: 10402 },
+  { genre: "Mystery", id: 9648 },
+  { genre: "War", id: 10752 },
+  { genre: "Western", id: 37 }
 ];
 
 function GenreView() {

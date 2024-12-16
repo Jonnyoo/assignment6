@@ -91,3 +91,21 @@
 .trailer-thumbnail:hover {
     transform: scale(1.05);
 }
+
+.buy-button {
+    padding: 10px 20px;
+    background-color: #ffaa21;
+    color: #282c2f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.buy-button:hover {
+    box-shadow: 0 0px 20px #ffaa219e;
+    transform: translateY(-6px);
+}

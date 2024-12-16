@@ -1,12 +1,15 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { useStoreContext } from '../Context/context';
 import "./DetailView.css"
 
 function DetailMovieView() {
     const [trailers, setTrailers] = useState([]);
     const [movie, setMovie] = useState([]);
     const { id } = useParams();
+    const { cart, setCart } = useStoreContext();
+    const isInCart = cart.has(id);
 
     useEffect(() => {
         async function fetchMovieDetails() {
@@ -37,6 +40,13 @@ function DetailMovieView() {
                         <p><strong>Rating:</strong> {movie.vote_average}</p>
                         <p><strong>Popularity:</strong> {movie.popularity}</p>
                         <p><strong>Box Office:</strong> {movie.revenue}$</p>
+                        <button
+                            onClick={() => setCart((prevCart) => prevCart.set(id, { title: movie.original_title, url: movie.poster_path }))}
+                            className="buy-button"
+                            disabled={isInCart}
+                        >
+                            {isInCart ? 'Added' : 'Buy'}
+                        </button>
                     </div>
                 </div>
                 {movie.poster_path && (

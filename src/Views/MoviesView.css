@@ -21,7 +21,7 @@
     margin-top: 95px;
     list-style-type: none;
     width: 300px;
-    height: 785px;
+    height: 1150px;
     padding: 30px;
     background-color: #282c2f;
     border-right: 1px solid #222427;
@@ -41,8 +41,8 @@
 
 .movieview-title {
     font-family: helvetica;
-    color: #fff;
-    font-size: 34px;
+    color: #dbdbdb;
+    font-size: 40px;
     font-weight: bold;
     margin-left: 70px;
     margin-top: 70px;

@@ -2,8 +2,6 @@ import { Link } from 'react-router-dom';
 import "./Genres.css";
 
 function Genres(props) {
-    console.log(props.genresList);
-
     return (
         <div>
             <ul>

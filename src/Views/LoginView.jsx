@@ -1,17 +1,20 @@
 import './LoginView.css';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useStoreContext } from "../Context/context.jsx";
 import { Link } from 'react-router-dom';
 import Header from "../Components/Header";
 
-function LoginView() {
 
+function LoginView() {
+  const { loggedIn, setLoggedIn } = useStoreContext();
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
   function login(event) {
     event.preventDefault();
     if (password === "mango") {
+      setLoggedIn(true);
       navigate('/movies');
     } else {
       alert("Wrong password!");
